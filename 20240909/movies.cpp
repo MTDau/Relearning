@@ -27,8 +27,14 @@ bool movies::views_increase(std::string new_name)
     return false;
 }
 void movies::display(){
+    if (movies_list.size() == 0){
+        std::cout << "Sorry, there is no movie to display.\n";
+        return;
+    }
     for (auto &i : movies_list)
     {
+        std::cout << "========================================/n";
         i.get_info();
+        std::cout << "========================================/n";
     }
 }
