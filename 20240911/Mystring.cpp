@@ -145,7 +145,7 @@ Mystring Mystring::operator*(const std::size_t i)
 }
 
 // Mutiply string then reassign
-Mystring Mystring::operator*=(const std::size_t i)
+Mystring &Mystring::operator*=(const std::size_t i)
 {
     // char *buff = new char[std::strlen(str) * i + 1];
     // std::strcpy(buff, str);
