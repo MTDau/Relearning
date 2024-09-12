@@ -26,7 +26,7 @@ public:
     Mystring &operator+=(const Mystring &rhs);      // Join string
 
     Mystring operator*(const std::size_t);  // Mutiply string
-    Mystring operator*=(const std::size_t); // Mutiply string then reassign
+    Mystring &operator*=(const std::size_t); // Mutiply string then reassign
     Mystring &operator++(); //Make Upercase. Pre-increasement
     Mystring operator++(int); //Make Upercase. Post-increasement
 
