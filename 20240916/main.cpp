@@ -1,7 +1,5 @@
 // Section 16
 // Challenge
-// #include <iostream>
-// #include <vector>
 #include "Account_Util.h"
 
 int main()
@@ -40,6 +38,6 @@ int main()
     delete p1;
     delete p2;
     delete p3;
-    return 0;
+
     return 0;
 }
