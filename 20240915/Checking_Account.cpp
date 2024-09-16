@@ -3,8 +3,7 @@
 Checking_Account::Checking_Account(std::string name, double balance) : Account(name, balance) {}
 
 bool Checking_Account::withdraw(double amount){
-    amount += fee;
-    return Account::withdraw(amount);
+    return Account::withdraw(amount + fee);
 }
 
  std::ostream &operator<<(std::ostream &os, const Checking_Account &account){
