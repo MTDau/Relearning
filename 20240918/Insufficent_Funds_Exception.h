@@ -1,6 +1,5 @@
 #ifndef _INSUFFICENT_FUNDS_EXCEPTION_H_
 #define _INSUFFICENT_FUNDS_EXCEPTION_H_
-#include <string>
 class Insufficent_Funds_Exception : public std::exception{
     public:
     Insufficent_Funds_Exception() noexcept = default;
