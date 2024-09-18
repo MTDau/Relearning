@@ -1,5 +1,5 @@
-#ifndef __ILLEGAL_BALANCE_EXCEPTION_H__
-#define __ILLEGAL_BALANCE_EXCEPTION_H__
+#ifndef __ILLEGALBALANCEEXCEPTION_H__
+#define __ILLEGALBALANCEEXCEPTION_H__
 #include <string>
 class IllegalBalanceException : public std::exception
 {
@@ -11,4 +11,4 @@ public:
     }
 };
 
-#endif // __ILLEGAL_BALANCE_EXCEPTION_H__
+#endif // __ILLEGALBALANCEEXCEPTIONH__
