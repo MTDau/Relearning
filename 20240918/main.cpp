@@ -32,6 +32,15 @@ int main()
         auto p3 = std::make_shared<Trust_Account>("Hermione", 20000);
         std::vector<std::shared_ptr<Account>> accounts{p1, p2, p3};
         withdraw(accounts, 3000);
+
+        auto p4 = std::make_unique<Savings_Account>("Harry", 50000);
+        auto p5 = std::make_unique<Checking_Account>("Ron", 30000);
+        auto p6 = std::make_unique<Trust_Account>("Hermione", 20000);
+        std::vector<std::unique_ptr<Account>> account2s;
+        account2s.push_back(std::move(p4));
+        account2s.push_back(std::move(p5));
+        account2s.push_back(std::move(p6));
+        withdraw(accounts, 30000);
     }
     catch (const IllegalBalanceException &ex)
     {
