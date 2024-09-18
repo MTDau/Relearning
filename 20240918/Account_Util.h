@@ -13,4 +13,8 @@ void display(const std::vector<std::shared_ptr<Account>> &accounts);
 void deposit(std::vector<std::shared_ptr<Account>> &accounts, double amount);
 void withdraw(std::vector<std::shared_ptr<Account>> &accounts, double amount);
 
+void display(const std::vector<std::unique_ptr<Account>> &accounts);
+void deposit(std::vector<std::unique_ptr<Account>> &accounts, double amount);
+void withdraw(std::vector<std::unique_ptr<Account>> &accounts, double amount);
+
 #endif
