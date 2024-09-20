@@ -53,7 +53,7 @@ void grading(std::vector<student> &students, std::string &key_answer, std::size_
         // Loop through all the answer
         for (int i{}; i < key_answer.length(); i++)
         {
-            a.answer[i] == key_answer[i] ? a.score++ : a.score;
+            a.answer.at(i) == key_answer.at(i) ? a.score++ : a.score;
         }
     }
 
@@ -68,7 +68,12 @@ void grading(std::vector<student> &students, std::string &key_answer, std::size_
         std::cout << std::setw(width1) << std::left << a.name << std::setw(width2) << std::right << a.score << std::endl;
         total_score += a.score;
     }
-    std::cout << std::setw(range) << std::setfill('-') << "" << std::setfill(' ') << std::endl
-              << std::setw(width1) << std::left << "Average score: " << std::setw(width2) << std::right
-              << std::setprecision(1) << std::fixed << total_score / count << std::endl;
+    if (count != 0)
+    {
+        std::cout << std::setw(range) << std::setfill('-') << "" << std::setfill(' ') << std::endl
+                  << std::setw(width1) << std::left << "Average score: " << std::setw(width2) << std::right
+                  << std::setprecision(1) << std::fixed << total_score / count << std::endl;
+    }else{
+        std::cout << "There is no student." << std::endl;
+    }
 }
