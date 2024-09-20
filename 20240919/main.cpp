@@ -60,19 +60,24 @@ int main()
     const int total_width{70};
     const int width1{20}, width2{20}, width3{15}, width4{15};
     ruler();
-    std::cout << std::setw((total_width - tours.title.length()) / 2) << ' ' << tours.title << "\n\n" << std::endl
-              << std::setw(width1) << std::left << "Country" << std::setw(width2) << "City"
-              << std::setw(width3) << std::right << "Population" << std::setw(width4) << "Price" << std::endl
-              << std::setfill('-') << std::setw(total_width) << '-' << std::endl << std::setfill(' ');
+    std::cout << std::setw((total_width - tours.title.length()) / 2) << "" << tours.title << "\n\n"
+              << std::endl
+              << std::setw(width1) << std::left << "Country"
+              << std::setw(width2) << "City"
+              << std::setw(width3) << std::right << "Population"
+              << std::setw(width4) << "Price" << std::endl
+              << std::setfill('-') << std::setw(total_width) << "" << std::endl
+              << std::setfill(' ') << std::setprecision(2) << std::fixed;
     for (bool first_loop{true}; const auto &country : tours.countries)
     { // loop through the countries
 
         for (const auto &city : country.cities)
         { // loop through the cities for each country
             // check for the first loop for the country name.
-            std::cout << std::setw(width1) << std::left << ((first_loop) ? country.name : "") << std::setw(width2)
-                      << city.name << std::setw(width3) << std::right << city.population << std::setw(width4)
-                      << std::setprecision(2) << std::fixed << city.cost << std::endl;
+            std::cout << std::setw(width1) << std::left << ((first_loop) ? country.name : "")
+                      << std::setw(width2) << city.name
+                      << std::setw(width3) << std::right << city.population
+                      << std::setw(width4) << city.cost << std::endl;
             first_loop = false;
         }
 
