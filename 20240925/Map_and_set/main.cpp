@@ -73,15 +73,7 @@ void part1()
         while (in_file >> word)
         {
             word = clean_string(word);
-            auto it = words.find(word);
-            if (it != words.end())
-            {
-                it->second++;
-            }
-            else
-            {
-                words[word] = 1;
-            }
+            words[word]++;
         }
 
         in_file.close();
@@ -111,18 +103,9 @@ void part2()
             while (iss >> word)
             {
                 word = clean_string(word);
-                auto it = words.find(word);
-                if (it != words.end())
-                {
-                    it->second.insert(line_number);
-                }
-                else
-                {
-                    words[word] = {line_number};
-                }
+                words[word].insert(line_number);
             }
         }
-        // You implement this code
 
         in_file.close();
         display_words(words);
